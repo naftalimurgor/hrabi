@@ -1,2 +1,2 @@
 # HRABI
-JSON to Human Reable ABI converter for Solidity JSON ABI
+JSON to Human Readble ABI converter for Solidity JSON ABI
