@@ -1,0 +1,20 @@
+{
+    "compilerOptions": {
+        "module": "commonjs",
+        "target": "esnext",
+        "baseUrl": ".",
+        "noImplicitAny": true,
+        "outDir": "lib",
+        "rootDir": "src/",
+        "sourceMap": false,
+        "strict": true,
+        "declaration": true,
+        // Emit interoperability between between CommonJs and ES Modules: 
+        "esModuleInterop": true
+    },
+    "include": ["src/**/*"],
+    "exclude": [
+        "node_modules",
+        "usage"
+    ]
+}
