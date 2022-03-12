@@ -92,8 +92,25 @@ const ERC1155 = [
 ## Contributing
 All contributions are highly welcome, be sure to check out the [contributing.md](./contributing) guidelines. Check out issues under the issues tab. Or open a new issue to help improve this tiny utility.
 
+## Development
+### Setting Up
+To set up project locally for development:
+```sh
+git clone <your fork url>
+cd <your fork url>
+yarn install
+```
+To build the project:
+```sh
+yarn run build
+```
+Testing changes can take the the classic `node <script.js>` approach. To test changes, the following works fine:
+```sh
+node lib/index.js parse GameItem.json GameItem.js
+```
 ## Support
-Any support( though not a must) is highly appreciated,
+Any support is highly appreciated, if you find this useful :smile:
+
 `ETH`:    `0x1Df4D4FA3d513De5d6a4E95a5DCcC8CBB02569B3`
 ## LICENSE
 `MIT`
