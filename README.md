@@ -1,10 +1,13 @@
 # hrabi
 
+<div style="text-align: center"> <img src="https://github.com/naftalimurgor/hrabi/blob/parse-abi-with-metadata/assets/logo.png"/></div>
+
 `JSON` to Human Readable `ABI` converter for Solidity JSON `ABIs`. A command-line tool that enables parsing `JSON` `ABIs` emitted during Smart Contract compilation to a Human Readable format, which is an `Array` with entries of the contract signatures.
+
 ## Usage
 
 ### Installation
-
+Install as a global dependency which will later be usable as a commandline application.
 ```sh
 npm i -g hrabi
 ```
