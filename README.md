@@ -21,7 +21,7 @@ hrabi parse <path to json abi file> <output path>
 ```
 To parse a `JSON ABI` to a Human Readable `ABI` format:
 <p align="center">
-  <img width="300" height="300" src="https://github.com/naftalimurgor/hrabi/blob/parse-abi-with-metadata/assets/hrabiUse.gif">
+  <img src="https://github.com/naftalimurgor/hrabi/blob/parse-abi-with-metadata/assets/hrabiUse.gif">
 </p>
 
 ```sh
