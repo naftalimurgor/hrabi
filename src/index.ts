@@ -7,7 +7,7 @@ const program = new Command()
 program
   .name('hrabi')
   .description('hrabi- JSON ABI to Human Readable ABI parser')
-  .version('0.1.0')
+  .version('2.1.0')
 
 program.command('parse')
   .argument('--abi')
@@ -15,4 +15,5 @@ program.command('parse')
   .action((abi, output) => {
     Parser.parse(abi, output)
   })
+
 program.parse()
