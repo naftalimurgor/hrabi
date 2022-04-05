@@ -20,16 +20,20 @@ Usage signature:
 hrabi parse <path to json abi file> <output path>
 ```
 To parse a `JSON ABI` to a Human Readable `ABI` format:
+<p align="center">
+  <img width="300" height="300" src="https://github.com/naftalimurgor/hrabi/blob/parse-abi-with-metadata/assets/hrabiUse.gif">
+</p>
 
 ```sh
 hrabi parse GameItem.json GameItem.js
 ```
 Where:
 1. `GameItem.json` is the `JSON ABI` file path
-2. `GameItem.js` is the output path to store the Human Readable formatted  `ABI`.
+2. `GameItem.js` is the output path pointing to a file to store the Human Readable formatted  `ABI`.
 
 Currently supports parsing to fully `Human Readable ABIs`. The biggest advantage with `Human Readable ABIs` is:
 - Provides an `array` of `strings` of a contract's signature. Quite handy to use as `ABI` becomes a regular `array` that's compact and integrates well with JavaScript code or any other ideal codebase.
+
 
 ### Example
 A sample `ERC1155` `ABI` in `JSON` format looks like this:
@@ -93,29 +97,60 @@ const ERC1155 = [
   "function transferFrom(address from, address to, uint256 tokenId)"
 ]
 ```
+## Example in use
+
+```typescript
+  <script>
+
+    const GreeterAddress = '0x34eB49779a4475b0Cead7DBBB5A5807e89FaB569'
+    const provider = new ethers.providers.Web3Provider(window.ethereum)
+
+    document.getElementById('connectBtn').addEventListener('click', connect)
+    async function connect() {
+      await provider.send('eth_requestAccounts', [])
+    }
+
+    const signer = provider.getSigner()
+
+    const GreeterAbi = [
+      "function greet() public view returns (string memory)",
+      "function setGreeting(string memory _greeting) public"
+    ]
+    
+    const greeterContractInstance = new ethers.Contract(GreeterAddress, GreeterAbi, signer)
+</script>
+```
+[Or see the example](https://github.com/naftalimurgor/Hello-hardhat/blob/main/client/index.html)
 
 ## Contributing
-All contributions are highly welcome, be sure to check out the [contributing.md](./contributing) guidelines. Check out issues under the issues tab. Or open a new issue to help improve this tiny utility.
+All contributions are highly welcome, be sure to check out the [contributing guidlines](https://github.com/naftalimurgor/hrabi/blob/main/CONTRIBUTING.md). Check out issues under the issues tab. Or open a new issue to help improve this  library.
 
 ## Development
 ### Setting Up
 To set up project locally for development:
 ```sh
 git clone <your fork url>
-cd <your fork url>
+cd <your fork path>
 yarn install
 ```
 To build the project:
 ```sh
-yarn run build
+yarn compile
 ```
 Testing changes can take the the classic `node <script.js>` approach. To test changes, the following works fine:
 ```sh
 node lib/index.js parse GameItem.json GameItem.js
 ```
+
+To test installation locally:
+```sh
+yarn test-install
+hrabi --version # check version info
+```
 ## Support
-Any support is highly appreciated, if you find this useful :smile:
+Any support is highly appreciated:
 
 `ETH`:    `0x1Df4D4FA3d513De5d6a4E95a5DCcC8CBB02569B3`
+
 ## LICENSE
 `MIT`
