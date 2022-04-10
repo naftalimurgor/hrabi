@@ -5,7 +5,6 @@ chai.use(require('chai-fs'))
 
 import Parser from '../src/Parser'
 
-
 describe('#Parser', function () {
   it('parse JSON ABI with extra Metadata to Human Readable ABI', async () => {
     this.timeout(1000) 
