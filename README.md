@@ -19,6 +19,7 @@ Usage signature:
 ```sh
 hrabi parse <path to json abi file> <output path>
 ```
+
 To parse a `JSON ABI` to a Human Readable `ABI` format:
 <p align="center">
   <img src="https://github.com/naftalimurgor/hrabi/blob/parse-abi-with-metadata/assets/hrabiUse.gif">
@@ -75,6 +76,7 @@ A sample `ERC1155` `ABI` in `JSON` format looks like this:
 ]
 ```
 In Human Readable Format, the above `ABI` becomes:
+
 ```javascript
 const ERC1155 = [
   "constructor()",
@@ -101,7 +103,7 @@ const ERC1155 = [
 
 ```typescript
   <script>
-
+    // possible lines of code omitted
     const GreeterAddress = '0x34eB49779a4475b0Cead7DBBB5A5807e89FaB569'
     const provider = new ethers.providers.Web3Provider(window.ethereum)
 
@@ -118,14 +120,17 @@ const ERC1155 = [
     ]
     
     const greeterContractInstance = new ethers.Contract(GreeterAddress, GreeterAbi, signer)
+
 </script>
 ```
-[Or see the example](https://github.com/naftalimurgor/Hello-hardhat/blob/main/client/index.html)
+[Or view the example](https://github.com/naftalimurgor/Hello-hardhat/blob/main/client/index.html)
 
 ## Contributing
+
 All contributions are highly welcome, be sure to check out the [contributing guidlines](https://github.com/naftalimurgor/hrabi/blob/main/CONTRIBUTING.md). Check out issues under the issues tab. Or open a new issue to help improve this  library.
 
 ## Development
+
 ### Setting Up
 To set up project locally for development:
 ```sh
@@ -147,10 +152,14 @@ To test installation locally:
 yarn test-install
 hrabi --version # check version info
 ```
+## Tests
+To run unit tests:
+```sh
+yarn test
+```
 ## Support
-Any support is highly appreciated:
-
-`ETH`:    `0x1Df4D4FA3d513De5d6a4E95a5DCcC8CBB02569B3`
+Any form of support is highly appreciated:
+For any form of support, please send `ETH` to : `0x1Df4D4FA3d513De5d6a4E95a5DCcC8CBB02569B3`
 
 ## LICENSE
 `MIT`

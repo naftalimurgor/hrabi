@@ -8,13 +8,14 @@
         "rootDir": "src/",
         "sourceMap": false,
         "strict": true,
-        "declaration": true,
+        "declaration": false,
         // Emit interoperability between between CommonJs and ES Modules: 
         "esModuleInterop": true
     },
-    "include": ["src/**/*"],
+    "include": ["src/**/*.ts"],
     "exclude": [
         "node_modules",
-        "usage"
+        "usage",
+        "__test__"
     ]
 }
