@@ -158,8 +158,7 @@ To run unit tests:
 yarn test
 ```
 ## Support
-Any form of support is highly appreciated:
-For any form of support, please send `ETH` to : `0x1Df4D4FA3d513De5d6a4E95a5DCcC8CBB02569B3`
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/P5P0HEF2O)
 
 ## LICENSE
 `MIT`
